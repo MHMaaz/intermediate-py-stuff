@@ -154,7 +154,7 @@ def hunt_for_materials(inventory, materials_list):
             if item == final_material:
                 amount = amount + amnt # where amnt will be added to the already existing item.
                 print(f"> You got {amnt} more of {final_material}!")
-                print(f"> Before, you had {amount} of paper.")
+                print(f"> Before, you had {amount} of {item}.")
     return inven
 
 def identify_crafted_item(table, items_list):
@@ -179,8 +179,6 @@ def identify_crafted_item(table, items_list):
             for i, v in items_list.items():
                 if v == table:
                     return i
-        elif should_be_zero > 0:
-            print("DIDNT MATCH FOR ITEM")
         table_no += 1
 
 def crafting_match(table_items, future_crafts): # future crafts is a list containing lists
