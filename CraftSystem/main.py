@@ -44,6 +44,8 @@ def items_to_craft():
 
 def hunt_for_materials_without_pick(inventory, materials_list):
     inven = inventory
+    if len(inven) == 0:
+        return print("You have nothing in your inventory! You should probably restart.")
     overall_item_chance = CHANCE_FOR_EASY_MATERIALS
     selected_chance = random.randint(1, 100)
     if selected_chance < overall_item_chance:
